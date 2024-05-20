@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import userListData from './data/user.json'; // データをインポート
 import './UserList.css'
 
 import Delete from './Delete';
+import Entry from './Entry';
 
-interface User {
+export interface User {
   id: number;
   name: string;
 }
@@ -14,11 +14,16 @@ function UserList() {
 
   // コンポーネントがマウントされた時にデータを読み込む
   useEffect(() => {
-    setUsers(userListData);
+    // GETリクエスト送信 & 受信
+    fetch("http://127.0.0.1:3001/api/v1/user_list")
+      .then((res) => res.json())
+      .then((json) => setUsers(json))
+      .catch(() => alert("error"));
   }, []);
 
-  const handleButtonClick = (userId: number) => {
-    console.log(userId);
+  // 子コンポーネントから受け取った値で親コンポーネントのusersを更新する関数
+  const handleValueChange = (newValue: User[]) => {
+    setUsers(newValue);
   };
 
   return (
@@ -28,10 +33,11 @@ function UserList() {
         {users.map(user => (
           <li key={user.id} className='data'>
             {Math.floor(user.id/1000)}KK{( '000' + (user.id%1000) ).slice( -3 )} - {user.name}
-            <Delete id={user.id}/>
+            <Delete handleValueChange={handleValueChange} id={user.id}/>
           </li>
         ))}
       </ul>
+      <Entry handleValueChange={handleValueChange} />
     </div>
   );
 }

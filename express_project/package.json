@@ -1,0 +1,25 @@
+{
+  "name": "express_project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./dist/server.js",
+    "build": "npx tsc",
+    "build:watch": "npx tsc -w",
+    "dev": "yarn run build:watch & yarn start"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^4.17.21",
+    "@types/http-errors": "^2.0.4",
+    "@types/morgan": "^1.9.9",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
+  }
+}

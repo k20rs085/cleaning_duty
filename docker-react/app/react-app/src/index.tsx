@@ -5,7 +5,7 @@ import './index.css';
 // import App from './App';
 import Heading from './Heading';
 import UserList from './UserList';
-import Entry from './Entry';
+import Lottery from './Lottery';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -16,7 +16,7 @@ root.render(
   <React.StrictMode>
     <Heading content='抽選クン' />
     <UserList />
-    <Entry />
+    <Lottery />
 
   </React.StrictMode>
 );
