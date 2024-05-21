@@ -2,5 +2,7 @@
     font-family: "MS Pゴシック", sans-serifs;
     font-size: 60px;
     padding-left: 10px;
+    width: 800px;
+    height: auto;
     background: yellow;
 }

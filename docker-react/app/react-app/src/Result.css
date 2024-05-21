@@ -1,16 +1,16 @@
 .result_image {
     position: absolute;
-    left: 400px;
-    bottom: 70px;
-    width: 400px;
+    left: 410px;
+    bottom: 220px;
+    width: 260px;
     height: auto;
 }
 
 .user {
     position: absolute;
-    width: 335px;
-    left: 435px;
-    bottom: 67px;
-    font-size: 50px;
+    width: 230px;
+    left: 426px;
+    bottom: 228px;
+    font-size: 20px;
     text-align: center;
 }

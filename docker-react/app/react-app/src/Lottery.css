@@ -36,7 +36,9 @@ button.btn {
 
   position: absolute;
   top: 145px;
-  left: 500px;
+  left: 430px;
+
+  width: 220px;
 }
 
 /*その他と主な共通部分は省略*/
