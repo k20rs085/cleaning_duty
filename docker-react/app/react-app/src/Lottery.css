@@ -33,8 +33,10 @@ button.btn {
   letter-spacing: 0.1em;
   color: #212529;
   border-radius: 0.5rem;
-  bottom: 300px;
-  left: 520px;
+
+  position: absolute;
+  top: 145px;
+  left: 500px;
 }
 
 /*その他と主な共通部分は省略*/

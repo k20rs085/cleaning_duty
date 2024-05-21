@@ -1,0 +1,16 @@
+.result_image {
+    position: absolute;
+    left: 400px;
+    bottom: 70px;
+    width: 400px;
+    height: auto;
+}
+
+.user {
+    position: absolute;
+    width: 335px;
+    left: 435px;
+    bottom: 67px;
+    font-size: 50px;
+    text-align: center;
+}

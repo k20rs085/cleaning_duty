@@ -4,7 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./dist/server.js",
+    "start": "node ./dist/server.js",
     "build": "npx tsc",
     "build:watch": "npx tsc -w",
     "dev": "yarn run build:watch & yarn start"

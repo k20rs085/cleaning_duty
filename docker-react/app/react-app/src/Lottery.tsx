@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Lottery.css'
 
-// import Result from './Result';
+import Result from './Result';
 
 export interface User {
     id: number;
@@ -9,7 +9,7 @@ export interface User {
 }
 
 const Lottery = () => {
-    const [ user, setUser ] = useState<User[]>([]);
+    const [ userName, setUserName ] = useState("");
 
     const buttonClick = () => {
         // 確認ウィンドウがあれば良いよね
@@ -18,13 +18,16 @@ const Lottery = () => {
         // 送信 & 受信
         fetch("http://127.0.0.1:3001/api/v1/lottery")
           .then((res) => res.json())
-          .then((json) => console.log(json))
+          .then((json) => setUserName(json))
           .catch(() => alert("error"));
-      };
+    };
 
     return (
-        <a className='btn lottery' onClick={() => buttonClick()}><span>Draw lots!</span></a>
-        // <button className='lottery' onClick={() => buttonClick()}>Draw lots!</button>
+        <div>
+            <a className='btn lottery' onClick={() => buttonClick()}><span>Draw lots!</span></a>
+            <Result name={userName} />
+            {/* <button className='lottery' onClick={() => buttonClick()}>Draw lots!</button> */}
+        </div>
     )
 }
 

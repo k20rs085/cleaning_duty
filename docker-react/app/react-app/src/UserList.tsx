@@ -32,7 +32,7 @@ function UserList() {
       <ul>
         {users.map(user => (
           <li key={user.id} className='data'>
-            {Math.floor(user.id/1000)}KK{( '000' + (user.id%1000) ).slice( -3 )} - {user.name}
+            {Math.floor(user.id/1000)}RS{( '000' + (user.id%1000) ).slice( -3 )} - {user.name}
             <Delete handleValueChange={handleValueChange} id={user.id}/>
           </li>
         ))}
